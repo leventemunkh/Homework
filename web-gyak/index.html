@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway" rel="stylesheet">
+    <title>Weboldal</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="logo512.png" style="height: 70px;">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#">Home</a></li>
+                <li class="nav-item"><a href="#">Profiles</a></li>
+            </ul>
+            <button class="nav-item" id="search-button">Search</button>
+            <div id="search-input-container" class="nav-item">
+                <input type="text" id="search-input" placeholder="Search...">
+                <button id="search-close-button">Close</button>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        const searchButton = document.getElementById('search-button');
+        const searchInputContainer = document.getElementById('search-input-container');
+        const searchCloseButton = document.getElementById('search-close-button');
+
+        // Initially hide the search input container
+        searchInputContainer.style.display = 'none';
+
+        // Show the search input container when the search button is clicked
+        searchButton.addEventListener('click', () => {
+            searchInputContainer.style.display = 'block';
+        });
+
+        // Hide the search input container when the close button is clicked
+        searchCloseButton.addEventListener('click', () => {
+            searchInputContainer.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
