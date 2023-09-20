@@ -1,10 +1,11 @@
 .cards {
-  border: 2px solid #180c30;
-  border-radius: 8px;
+  border: 4px solid #180c30;
+  border-radius: 10px;
+  background-color: rgb(244, 242, 176);
 }
 
 .img {
-  border-radius: 6px 6px 0 0;
+  border-radius: 5px 5px 0 0;
 }
 
 .badge {

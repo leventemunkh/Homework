@@ -1,11 +1,25 @@
 import React from "react";
-import styley from "./Search.module.css";
+import styles from "./Search.module.css";
 
-const Search = () => {
+const Search = ({ setSearch }) => {
   return (
-    <form className="">
-      <input placeholder="" type="text" className="" />
-      <button className="btn btn-primary">Search</button>
+    <form className="d-flex justify-content-center gap-4 mt-3 mb-3 ">
+      <input
+        onChange={(e) => {
+          setSearch(e.target.value);
+        }}
+        placeholder="Search characters"
+        type="text"
+        className={styles.input}
+      />
+      <button
+        onClick={(e) => {
+          e.preventDefault();
+        }}
+        className="btn btn-primary btn-sm fs-6"
+      >
+        Search
+      </button>
     </form>
   );
 };
